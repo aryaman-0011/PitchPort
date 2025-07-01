@@ -6,6 +6,8 @@ import { Textarea } from './ui/textarea'
 import MDEditor from '@uiw/react-md-editor'
 import { Button } from './ui/button'
 import { Send } from 'lucide-react'
+import { formSchema } from '@/lib/validation'
+import { z } from 'zod'
 
 const StartupForm = () => {
 
@@ -13,13 +15,44 @@ const StartupForm = () => {
   const [pitch, setPitch] = useState("")
 
 
-  const handleFormSubmit = () => {}
+  const handleFormSubmit = async (prevState: any, formData: FormData) => {
+    try {
+      const formValues = {
+        title: formData.get('title') as string,
+        description: formData.get('description') as string,
+        category: formData.get('category') as string,
+        link: formData.get('link') as string,
+        pitch
+      }
+
+      await formSchema.parseAsync(formValues)
+
+      console.log(formValues)
+      // const result = await createIdea(prevState, formData, pitch)
+
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const fieldErrors = error.flatten().fieldErrors
+
+        setErrors(fieldErrors as unknown as Record<string, string>)
+
+        return { ...prevState, error: "Validation Failed", status: "ERROR" }
+      }
+
+      return {
+        ...prevState,
+        error: "An unexpected error has occured",
+        status: "ERROR"
+      }
+
+    }
+  }
 
   const [state, formAction, isPending] = useActionState(handleFormSubmit, { error: '', status: 'INITIAL' })
 
 
   return (
-    <form action={() => { }} className='startup-form'>
+    <form action={formAction} className='startup-form'>
       {/* Title */}
 
       <div>
