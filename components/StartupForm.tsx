@@ -42,7 +42,7 @@ const StartupForm = () => {
         })
 
 
-        router.push(`/startup/${result.id}`)
+        router.push(`/startup/${result._id}`)
       }
 
       return result;
