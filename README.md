@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 PitchPort
 
-## Getting Started
+**PitchPort** is a modern web platform where users can register and share their startup ideas. Designed with performance and scalability in mind, PitchPort leverages the power of **Next.js**, **Sanity**, and other cutting-edge technologies to deliver a seamless user experience.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+
+> 🔗 [Visit PitchPort on Vercel](https://your-vercel-link.vercel.app)
+
+---
+
+## ✨ Features
+
+- 🔐 User Authentication with NextAuth
+- 💡 Share and manage startup ideas
+- 🔍 Search by category, author, or name
+- ⚡️ Powered by ISR (Incremental Static Regeneration) and PPR (Partial Prerendering)
+- 📦 CMS-backed data storage via Sanity
+- 🎨 Beautiful UI using Tailwind CSS + Shadcn UI components
+- 📈 Production error monitoring with Sentry
+- ☁️ Deployed on Vercel for scalability
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology     | Description                                      |
+|----------------|--------------------------------------------------|
+| **Next.js**    | React framework with advanced routing/rendering |
+| **React**      | UI library                                       |
+| **NextAuth.js**| Secure authentication                           |
+| **Tailwind CSS** | Utility-first styling framework               |
+| **Shadcn UI**  | Prebuilt accessible components for Tailwind     |
+| **Sanity CMS** | Content and idea storage                        |
+| **Sentry**     | Error logging & monitoring                      |
+| **Vercel**     | Hosting and deployment                          |
+
+---
+
+## ⚙️ Project Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/aryaman-0011/PitchPort.git
+cd pitchport
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Environment Configuration
+
+Create a `.env.local` file in the root directory and add:
+
+```env
+AUTH_SECRET=""
+AUTH_GITHUB_ID =""
+AUTH_GITHUB_SECRET =""
+NEXT_PUBLIC_SANITY_PROJECT_ID=""
+NEXT_PUBLIC_SANITY_DATASET=""
+NEXT_PUBLIC_SANITY_API_VERSION=""
+SANITY_WRITE_TOKEN=""
+```
+
+### 4. Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to see the app running.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
+Feel free to open issues or submit pull requests for improvements. Contributions are always welcome!
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
+For questions or feedback, please reach out at : 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Email](https://skillicons.dev/icons?i=gmail&theme=dark)](mailto:kushwaha.aryaman21@gmail.com)
+[![Email](https://skillicons.dev/icons?i=linkedin&theme=dark)](https://www.linkedin.com/in/aryaman-kushwaha-b60b2028a/)
