@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-> 🔗 [Visit PitchPort on Vercel](https://your-vercel-link.vercel.app)
+> 🔗 [Visit PitchPort on Vercel](https://pitch-port.vercel.app/)
 
 ---
 
